@@ -33,7 +33,7 @@ function App() {
 
       <Routes>
 
-
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/productos" element={<ItemListContainer />} />
         <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
 
