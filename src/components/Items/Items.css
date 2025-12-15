@@ -58,3 +58,14 @@
 .product-btn:hover {
   opacity: 0.8;
 }
+.detalle-producto{
+     display: inline-block;
+  background: #8b4ec7;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+    margin-left: 250px;
+    margin-top: 50px;
+    text-align: center;
+
+}

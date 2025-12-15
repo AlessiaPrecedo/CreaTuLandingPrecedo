@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
-import products from "../../data/products.json";
-import ItemDetail from "./ItemDetail";
+import { useParams } from 'react-router-dom';
+import products from '../../data/products.json';
+import ItemDetail from './ItemDetail';
 
 function ItemDetailContainer() {
   const { id } = useParams();
