@@ -5,9 +5,10 @@ import ItemList from './ItemList';
 function ItemListContainer() {
   const { categoryId } = useParams();
 
-  const filteredProducts = categoryId
-    ? products.filter((p) => p.category === categoryId)
-    : products;
+  const filteredProducts =
+    !categoryId || categoryId === 'productos'
+      ? products
+      : products.filter((p) => p.category === categoryId);
 
   return (
     <div>

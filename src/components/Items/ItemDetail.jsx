@@ -1,41 +1,40 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import './Items.css';
 
 function ItemDetail({ product }) {
   if (!product) return <p>Producto no encontrado</p>;
 
+  const { addToCart } = useContext(CartContext);
   const [cantidad, setCantidad] = useState(1);
 
   const agregarAlCarrito = () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    const itemExistente = cart.find((item) => item.id === product.id);
-
-    if (itemExistente) {
-      itemExistente.cantidad += cantidad;
-    } else {
-      cart.push({ ...product, cantidad });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    alert('Producto agregado al carrito');
+    addToCart({ ...product, cantidad });
   };
 
   return (
     <div className="detalle-producto">
       <h2>{product.name}</h2>
-      <p>Precio: ${product.price}</p>
-      <p>Categoría: {product.category}</p>
 
-      <div>
+      <p>
+        <span>Precio:</span> ${product.price}
+      </p>
+
+      <p>
+        <span>Categoría:</span> {product.category}
+      </p>
+
+      <div className="detalle-cantidad">
         <button onClick={() => setCantidad((c) => Math.max(1, c - 1))}>
           -
         </button>
-        <span style={{ margin: '0 10px' }}>{cantidad}</span>
+        <span>{cantidad}</span>
         <button onClick={() => setCantidad((c) => c + 1)}>+</button>
       </div>
 
-      <button onClick={agregarAlCarrito}>Agregar al carrito</button>
+      <button className="agregar" onClick={agregarAlCarrito}>
+        Agregar al carrito
+      </button>
     </div>
   );
 }

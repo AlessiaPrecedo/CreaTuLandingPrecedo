@@ -1,5 +1,4 @@
 import { createContext, useState } from 'react';
-import CartWidget from '../components/NavBar/CartWidget';
 
 export const CartContext = createContext();
 
@@ -10,11 +9,13 @@ export function CartProvider({ children }) {
     setCart((prevCart) => [...prevCart, item]);
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
 }
-
-export default CartProvider;

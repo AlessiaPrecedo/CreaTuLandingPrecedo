@@ -1,8 +1,20 @@
-import React from "react";
-import "./CartWidget.css";
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import './CartWidget.css';
 
-function CartWidget({ cart }) {
-  const quantity = cart ? cart.reduce((acc, item) => acc + (item.quantity || 0), 0) : 0;
+function CartWidget() {
+  const { cart } = useContext(CartContext);
+
+  const quantity = cart.reduce((acc, item) => acc + item.cantidad, 0);
+
+  if (quantity === 0) {
+    return (
+      <div className="cart-widget">
+        <span className="cart-icon">🛒</span>
+        <span className="cart-badge">{quantity}</span>
+      </div>
+    );
+  }
 
   return (
     <div className="cart-widget">

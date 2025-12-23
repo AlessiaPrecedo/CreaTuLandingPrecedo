@@ -1,11 +1,32 @@
 [
-  { "id": 1, "name": "Vela Aromática Lavanda", "price": 3500, "category": "velas" },
+  {
+    "id": 1,
+    "name": "Vela Aromática Lavanda",
+    "price": 3500,
+    "category": "velas"
+  },
   { "id": 2, "name": "Vela de Coco", "price": 4200, "category": "velas" },
-  { "id": 3, "name": "Aceite Esencial Bergamota", "price": 5200, "category": "esencias" },
-  { "id": 4, "name": "Vela Aromática Chicle", "price": 3500, "category": "velas" },
+  {
+    "id": 3,
+    "name": "Aceite Esencial Bergamota",
+    "price": 5200,
+    "category": "esencias"
+  },
+  {
+    "id": 4,
+    "name": "Vela Aromática Chicle",
+    "price": 3500,
+    "category": "velas"
+  },
   { "id": 5, "name": "Vela de Limon", "price": 4200, "category": "velas" },
-  { "id": 6, "name": "Aceite Esencial Frutilla", "price": 5200, "category": "esencias" },
+  {
+    "id": 6,
+    "name": "Aceite Esencial Frutilla",
+    "price": 5200,
+    "category": "esencias"
+  },
   { "id": 7, "name": "Termo", "price": 10000, "category": "Home" },
+
   { "id": 8, "name": "Mate", "price": 10000, "category": "Home" },
   { "id": 9, "name": "Porta mate", "price": 10000, "category": "Home" },
   { "id": 10, "name": "Pava Electrica", "price": 12000, "category": "Home" },
@@ -13,5 +34,5 @@
   { "id": 12, "name": "Silla", "price": 15000, "category": "Home" },
   { "id": 13, "name": "Ventilador", "price": 45000, "category": "Home" },
   { "id": 14, "name": "Somier", "price": 80000, "category": "Home" },
-  { "id": 15, "name": "sillon", "price": 160000, "category": "Home"}
+  { "id": 15, "name": "sillon", "price": 160000, "category": "Home" }
 ]
