@@ -69,6 +69,43 @@
   text-align: center;
 }
 
+/*ItemListContainer*/
+
+.titulo-categoria {
+  margin: 40px auto 30px;
+  text-align: center;
+  font-size: 34px;
+  color: #7b3fe4;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  position: relative;
+}
+.titulo-categoria::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: #5a2bbd;
+  margin: 14px auto 0;
+  border-radius: 4px;
+}
+.loader {
+  margin: 80px auto;
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e6d9ff;
+  border-top: 6px solid #7b3fe4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*ItemDetail*/
 .detalle-producto {
   max-width: 900px;
@@ -80,12 +117,21 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
 }
 
 .detalle-producto h2 {
   font-size: 32px;
   color: #7b3fe4;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.detalle-producto img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
 .detalle-producto p {
@@ -97,6 +143,68 @@
   font-weight: 600;
   color: #5a2bbd;
 }
+
+.detalle-producto h2 {
+  font-size: 36px;
+  color: #5a2bbd;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.detalle-producto h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #7b3fe4;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* contador */
+.detalle-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.detalle-cantidad button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ede7f6;
+  color: #5a2bbd;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.detalle-cantidad span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* botón principal */
+.detalle-producto .agregar {
+  background-color: #7b3fe4;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.detalle-producto .agregar:hover {
+  background-color: #5a2bbd;
+  transform: translateY(-2px);
+}
+
 /*Cantidades*/
 
 .detalle-cantidad {

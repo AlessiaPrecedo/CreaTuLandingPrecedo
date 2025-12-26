@@ -1,4 +1,6 @@
 import { useContext } from 'react';
+import { addDoc, collection, Timestamp } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 import { CartContext } from '../../context/CartContext';
 import './cart.css';
 
@@ -10,8 +12,15 @@ function Cart() {
   }
 
   const finalizarCompra = () => {
-    alert('¡Compra realizada con éxito! 🎉');
-    clearCart();
+    const order = {
+      items: cart,
+      total: getTotal(),
+      date: Timestamp.fromDate(new Date()),
+    };
+    addDoc(collection(db, 'orders'), order).then((docRef) => {
+      alert(`Compra realizada 💮\nID: ${docRef.id}`);
+      clearCart();
+    });
   };
 
   return (

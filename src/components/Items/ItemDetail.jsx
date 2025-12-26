@@ -15,7 +15,7 @@ function ItemDetail({ product }) {
   return (
     <div className="detalle-producto">
       <h2>{product.name}</h2>
-
+      <img src={product.image} alt={product.name} />
       <p>
         <span>Precio:</span> ${product.price}
       </p>
