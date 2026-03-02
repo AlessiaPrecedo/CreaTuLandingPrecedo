@@ -1,0 +1,45 @@
+:root {
+  --color-primary: #c084fc; /* violeta suave */
+  --color-secondary: #f472b6; /* rosa */
+  --color-dark: #1f1f1f;
+  --color-light: #fafafa;
+  --color-gray: #6b7280;
+
+  --bg-gradient: linear-gradient(135deg, #c084fc, #f472b6);
+}
+* {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+button {
+  background: var(--bg-gradient);
+  border: none;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
