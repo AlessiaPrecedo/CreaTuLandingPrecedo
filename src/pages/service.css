@@ -1,0 +1,52 @@
+.services-banner {
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Imagen fija detrás */
+.services-banner::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('../images/banner/baner.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Overlay encima de la imagen */
+.services-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 250, 247, 0.72);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+/* Texto por encima del overlay */
+.services-banner-content {
+  position: relative;
+  z-index: 1;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 420px);
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  aspect-ratio: unset;
+  height: 100%;
+}
+/* Responsive — 1 columna en mobile */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 340px);
+  }
+}

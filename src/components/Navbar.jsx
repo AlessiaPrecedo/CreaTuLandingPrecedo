@@ -21,6 +21,7 @@ function Navbar({ user }) {
       transition={{ duration: 0.4 }}
     >
       {/* LOGO */}
+      <img className="logo1" src="/images/SEO/logo.png" alt="" />
       <h2 className="logo">Eleodora Pizarro Atelier</h2>
 
       {/* HAMBURGUESA */}
@@ -60,7 +61,6 @@ function Navbar({ user }) {
                     Admin
                   </Link>
                 </li>
-
                 <li>
                   <motion.button
                     className="logout-btn"
@@ -73,9 +73,9 @@ function Navbar({ user }) {
                 </li>
               </>
             ) : (
-              <li>
-                <Link to="/admin" onClick={() => setOpen(false)}>
-                  Login
+              <li className="secret-login">
+                <Link to="/Admin" onClick={() => setOpen(false)} title="Acceso">
+                  🔒
                 </Link>
               </li>
             )}

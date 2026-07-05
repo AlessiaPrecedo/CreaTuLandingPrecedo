@@ -1,34 +1,81 @@
 .login-admin-page {
-  min-height: 70vh;
+  padding-top: 80px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 300px;
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 5%;
 }
 
 .login-form input {
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 .login-form button {
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 8px;
   background-color: #6b3f2a;
   color: white;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-form button:hover {
+  background-color: #5a3423;
 }
 
 .error {
   color: crimson;
   font-size: 0.9rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .login-admin-page {
+    padding: 30px 16px;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 1rem;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 420px) {
+  .login-admin-page h1 {
+    margin-bottom: 16px;
+  }
+
+  .login-admin-page p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  .login-form {
+    gap: 10px;
+  }
 }
