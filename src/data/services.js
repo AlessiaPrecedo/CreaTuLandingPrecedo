@@ -41,6 +41,18 @@ const services = [
       '/images/disfraces/disco.jpg',
     ],
   },
+  {
+    id: 5,
+    title: 'Egresados',
+    description: 'Disfraces personalizados para egresados.',
+    images: [
+      '/images/disfraces/egresado1.jpg',
+      '/images/disfraces/egresado2.jpg',
+      '/images/disfraces/egresado3.jpg',
+      '/images/disfraces/egresado4.jpg',
+      '/images/disfraces/egresado5.jpg',
+    ],
+  },
 ];
 
 export default services;

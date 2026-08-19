@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm.cmd run build",
+    "deploy": "firebase.cmd deploy --only hosting --project eleodora-ecommerce",
     "lint": "eslint .",
     "preview": "vite preview"
   },

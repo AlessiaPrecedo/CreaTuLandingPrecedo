@@ -58,16 +58,16 @@ function SEO({
           url: SITE_URL,
           logo: DEFAULT_IMAGE,
           image: DEFAULT_IMAGE,
-          telephone: '+54 9 11 73639089', // 👈 tu número real de WhatsApp
+          telephone: '+54 9 11 73639089',
           address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Lanus Oeste', // 👈 ciudad real
+            addressLocality: 'Lanus Oeste',
             addressRegion: 'Buenos Aires',
             addressCountry: 'AR',
           },
           contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+54 9 11 73639089', // 👈 mismo número
+            telephone: '+54 9 11 73639089',
             contactType: 'customer service',
             availableLanguage: 'Spanish',
           },
